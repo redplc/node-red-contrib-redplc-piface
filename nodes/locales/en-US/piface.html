@@ -1,0 +1,51 @@
+<!--
+  Copyright 2021 Ocean (iot.redplc@gmail.com).
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/html" data-help-name="piface">
+    <p>redPlc PiFace Digital Module.</p>
+    <h3><b>Input:</b></h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">string</span></dt>
+    </dl>
+    <h3><b>Output:</b></h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">string</span></dt>
+    </dl>
+    <h3><b>Variable:</b></h3>
+        <dl class="message-properties">
+            <dt>I </b><i>adr</i> Digital Input<span class="property-type">number (32 bit)</span></dt>
+            <dd>bits 0..7 <- Input-0 .. Input-7</dd>
+            <dd>Inputs are true on connect to ground</dd>
+            <dt>Q </b><i>adr</i> Digital Output<span class="property-type">number (32 bit)</span></dt>
+            <dd>bit 0 -> Output-0/Relay-1</dd>
+            <dd>bit 1 -> Output-1/Relay-2</dd>
+            <dd>bits 2..7 -> Output-2 .. Output-7</dd>
+            <dd>Outputs connects to gnd on true</dd>
+        </dl>
+    <h3><b>Details:</b></h3>
+    <p>
+        Payload "input" updates <b>I</b> global variable<br>
+        with digital input.<br>
+        Payload "output" updates digital output<br> 
+        from <b>Q</b> global variable.<br>
+        On startup, global variables are created.<br>
+        <p class="form-tips">
+            This node works only on Raspberry Pi.<br>
+            Enable spi with raspi-config.<br>
+            Check jumper J1 and J2 for address.
+        </p>
+	</p>
+</script>
