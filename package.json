@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-redplc-piface",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "redPlc PiFace Digital Module",
 
   "dependencies": {
