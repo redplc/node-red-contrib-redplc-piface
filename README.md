@@ -6,6 +6,10 @@ redPlc module node for PiFace Digital.<br>
 
 [redPlc use this module node. Install redPlc.](https://www.npmjs.com/package/node-red-contrib-redplc)
 
+[If you use this node for other nodes install this.](https://www.npmjs.com/package/node-red-contrib-redplc-module)
+
+
+
 Install with Node-Red Palette Manager or npm command:
 ```
 cd ~/.node-red
