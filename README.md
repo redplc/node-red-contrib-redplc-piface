@@ -1,14 +1,22 @@
 # node-red-contrib-redplc-piface
 
-redPlc module node for PiFace Digital.<br>
+Node-Red node for PiFace Digital<br>
+
+## Node Features
+- 8 x Digital Outputs with 2 x Relays
+- 8 x Digital Inputs with 4 tactile Switches
+- 8 x Leds for Digital Inputs
+- Four selectable Module Address 
+
+[PiFace Digital more Info](http://www.piface.org.uk/products/piface_digital_2/)
 
 ## Install
 
-[redPlc use this module node. Install redPlc.](https://www.npmjs.com/package/node-red-contrib-redplc)
+For using with Ladder-Logic install
+[redPlc](https://www.npmjs.com/package/node-red-contrib-redplc) nodes
 
-[If you use this node for other nodes install this.](https://www.npmjs.com/package/node-red-contrib-redplc-module)
-
-
+For using with other nodes, install
+[module](https://www.npmjs.com/package/node-red-contrib-redplc-module) nodes
 
 Install with Node-Red Palette Manager or npm command:
 ```
@@ -16,15 +24,12 @@ cd ~/.node-red
 npm install node-red-contrib-redplc-piface
 ```
 
-[PiFace Digital more Info](http://www.piface.org.uk/products/piface_digital_2/)
-
 ## Usage
-
-Wire this node to first output of redPlc cpu node.<br>
-Global variable I are updated with digital inputs.<br>
-Global variable Q sets digital output and relays.<br>
-This node works only on Raspberry Pi with Raspberry Pi OS.<br>
-Enable SPI with raspi-config.
+Update is triggered by redPlc cpu node<br>
+or module-update node<br>
+This node reads/writes from/to Node-Red global variables<br>
+This node works only on Raspberry Pi with Raspberry Pi OS<br>
+Enable SPI with raspi-config
 
 ## I/O Mapping
 ### Digital Input (Variable I):

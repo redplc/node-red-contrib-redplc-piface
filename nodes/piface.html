@@ -21,15 +21,15 @@
         paletteLabel: 'PiFace',
         defaults: {
             devadr:     { value: "0", required: true },
-            addressdi:  { value: 0, required: true, validate: function (v) { return RED.validators.number(v) && (v >= 0) && (v < 1000); } },
-            addressdo:  { value: 0, required: true, validate: function (v) { return RED.validators.number(v) && (v >= 0) && (v < 1000); } },
+            addressdi:  { value: 0, required: true, validate: function (v) { return RED.validators.number(v) && (v >= 0) && (v <= 999); } },
+            addressdo:  { value: 0, required: true, validate: function (v) { return RED.validators.number(v) && (v >= 0) && (v <= 999); } },
             addressspi: { value: "0" },
         },
         inputs: 1,
         outputs: 1,
 		inputLabels: "in:string",
 		outputLabels: ["out:string"],
-        icon: "rpi.svg",
+        icon: "raspi.png",
         label: function () { return "PiFace @" + this.devadr; },
     });
 </script>
